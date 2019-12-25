@@ -6,7 +6,7 @@ before install:
   - docker build -t vkarmadocker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true vkarmadocker/docker-react npm run test s-- --coverage
+  - docker run -e CI=true vkarmadocker/docker-react npm run test --- --coverage
 
 deploy:
   provider: elasticbeanstalk
